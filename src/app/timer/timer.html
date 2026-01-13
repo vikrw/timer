@@ -1,0 +1,9 @@
+<div class="timer-card">
+      @if (secondsLeft() !== null) {
+        <p>Seconds left to deadline: 
+          <span class="countdown-value">{{ secondsLeft() }}</span>
+        </p>
+      } @else {
+        <p>Synchronizing with atomic clock...</p>
+      }
+</div>
