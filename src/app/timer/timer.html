@@ -1,9 +1,12 @@
 <div class="timer-card">
-      @if (secondsLeft() !== null) {
-        <p>Seconds left to deadline: 
-          <span class="countdown-value">{{ secondsLeft() }}</span>
-        </p>
-      } @else {
-        <p>Synchronizing with atomic clock...</p>
-      }
+  @if (secondsLeft() > 0) {
+    <div class="stats">
+      <p>Total Seconds: <span class="raw-val">{{ secondsLeft() }}s</span></p>
+      <p>Time Remaining: <span class="value">{{ formattedTime() }}</span></p>
+    </div>
+  } @else if (secondsLeft() === 0) {
+    <p class="expired">Deadline Reached</p>
+  } @else {
+    <p>Initializing Signal Stream...</p>
+  }
 </div>

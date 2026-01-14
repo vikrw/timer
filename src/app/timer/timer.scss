@@ -1,11 +1,25 @@
 .timer-card { 
     padding: 1.5rem; 
-    border: 1px solid #333; 
     border-radius: 12px; 
-    font-family: monospace; 
+    background: #0f172a; 
+    color: #f8fafc; 
+    contain: content; 
+    width: fit-content;
 }
-.countdown-value {
-     color: #27ae60; 
+    
+.raw-val, .value { 
+    font-family: 'JetBrains Mono', monospace; 
+    font-variant-numeric: tabular-nums; 
+    color: #22c55e;
+    font-weight: 700;
+}
+    
+.expired {
+     color: #ef4444; 
      font-weight: bold; 
-     font-size: 1.2rem; 
+}
+.stats p { 
+    margin: 0.5rem 0; 
+    font-size: 0.9rem; 
+    color: #94a3b8; 
 }
